@@ -49,7 +49,7 @@ def CalculateHypergeometricSuccesses(number_of_seen_cards,number_of_desired_land
     return (math.comb(logged.number_of_land_cards,number_of_desired_land_cards +1)*math.comb(logged.number_of_nonland_cards,number_of_excess_seen_cards))/math.comb(logged.number_of_all_cards,number_of_seen_cards)
 
 def RaiseToPowerOfLogarithmicScale():
-    for index in range(starting.hand_size):
+    for index in range(logged.number_of_all_cards -starting.hand_size):
         logged.results[index] = logged.results[index] **(math.log(index+1)+1)
 
 def AdjustToNumberOfNonLandCards():
